@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- FOOD PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="diet.food">
+		<put-attribute name="body" value="/WEB-INF/views/diet/food.jspx" />
+	</definition>
+
+	<!-- FOOD RECOMMEND PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="diet.food_combination">
+		<put-attribute name="body"
+			value="/WEB-INF/views/diet/food_combination.jspx" />
+	</definition>
+
+</tiles-definitions>

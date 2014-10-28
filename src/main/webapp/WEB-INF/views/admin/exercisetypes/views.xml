@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="admin/exercisetypes/list">
+        <put-attribute name="body" value="/WEB-INF/views/admin/exercisetypes/list.jspx"/>
+    </definition>
+<definition extends="default" name="admin/exercisetypes/show">
+        <put-attribute name="body" value="/WEB-INF/views/admin/exercisetypes/show.jspx"/>
+    </definition>
+<definition extends="default" name="admin/exercisetypes/create">
+        <put-attribute name="body" value="/WEB-INF/views/admin/exercisetypes/create.jspx"/>
+    </definition>
+<definition extends="default" name="admin/exercisetypes/update">
+        <put-attribute name="body" value="/WEB-INF/views/admin/exercisetypes/update.jspx"/>
+    </definition>
+</tiles-definitions>

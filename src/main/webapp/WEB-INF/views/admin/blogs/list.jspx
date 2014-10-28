@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_Blog" items="${blogs}" z="1zn4nC71VU/UmJ/KwNAgwpKJU/s=">
+        <table:table data="${blogs}" id="l_com_usyd_group7_domain_Blog" path="/admin/blogs" z="egdaeZt6hOJtVfIHAUvg6sooojw=">
+            <table:column id="c_com_usyd_group7_domain_Blog_title" property="title" z="GTgz9vgQKBqbFw2X9W1gyj/BRTU="/>
+            <table:column id="c_com_usyd_group7_domain_Blog_content" property="content" z="ZxnJ/QIxVmnaukpqruJFJZvhZo4="/>
+            <table:column id="c_com_usyd_group7_domain_Blog_author" property="author" z="06q27VkYRLaEB1ncOqZpReNfFoI="/>
+            <table:column id="c_com_usyd_group7_domain_Blog_blogType" property="blogType" z="IzgP9h0GFzYOIaEmY3aOuK7nkew="/>
+            <table:column date="true" dateTimePattern="${blog_created_date_format}" id="c_com_usyd_group7_domain_Blog_created" property="created" z="fOtN+QRU/yQ2VAyBHiIKkOSHjxk="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,17 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags">
+
+	<spring:url value="/clients/edit_profile" var="edit_profile_url" />
+	<spring:url value="/clients/diet" var="diet_url" />
+	<spring:url value="/clients/verify_email" var="verify_email_url" />
+	<spring:url value="/clients/my_level" var="my_level_url" />
+
+	<ul class="nav nav-pills nav-stacked page-menu"
+		style="max-width: 300px;" id="clients_menu">
+		<li><a href="${edit_profile_url}">Profile</a></li>
+		<li><a href="${diet_url}">Diet</a></li>
+		<li><a href="${my_level_url}">My Level</a></li>
+	</ul>
+</div>

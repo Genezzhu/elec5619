@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_ClientLevel" items="${clientlevels}" z="0+DhHyEig7WbKYGcEffGNJahjDI=">
+        <table:table data="${clientlevels}" id="l_com_usyd_group7_domain_ClientLevel" path="/admin/clientlevels" z="ncZTKuUbWP9wYj1tT4pc0Z4Dqp4=">
+            <table:column id="c_com_usyd_group7_domain_ClientLevel_clientLevel" property="clientLevel" z="7UBE3S1dLV/IOZlbkSY+QQiwjC0="/>
+            <table:column id="c_com_usyd_group7_domain_ClientLevel_expRequired" property="expRequired" z="52nrZMG0ZP6ljirnYz5IATCJ2dU="/>
+            <table:column id="c_com_usyd_group7_domain_ClientLevel_name" property="name" z="9HdDHImmhrcLGXr841cQs1LV/eE="/>
+            <table:column id="c_com_usyd_group7_domain_ClientLevel_badge" property="badge" z="Qvp37c9fnedQ45cuf+zmciPK7js="/>
+        </table:table>
+    </page:list>
+</div>

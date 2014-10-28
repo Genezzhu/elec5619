@@ -1,0 +1,145 @@
+.delete-row{
+    border-radius: 100%;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+    height: 1em;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    width: 1em;
+    color: #ff0000;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.delete-row:hover{
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+#cartTable td{
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 12px;
+    word-wrap: break-word;
+}
+
+#cartTable th{
+    text-align: center;
+    padding: 6px 12px;
+    word-wrap: break-word;
+}
+
+.table input{
+    margin: 0;
+}
+
+.productQuantity{
+    border-color: #C8BFC6 -moz-use-text-color #C8BFC6 #C8BFC6;
+    border-image: none;
+    border-radius: 2px 0 0 2px;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    box-shadow: 0 0 2px 0 #F7F6F7 inset;
+    color: #000000;
+    background-color: #ffffff;
+    float: left;
+    font-weight: 700;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+}
+
+.plus, .minus{
+    background: -moz-linear-gradient(center top, #F7F6F7 0px, #E0DADF 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #C8BFC6;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.075) inset, 0 1px 0 rgba(255, 255, 255, 0.302) inset, 0 1px 2px rgba(0, 0, 0, 0.102);
+    color: #5E5E5E;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    height: 15px;
+    line-height: 13px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    vertical-align: text-top;
+    width: 20px;
+}
+
+.minus {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.plus{
+    right: 0;
+    top: 0;
+}
+
+.quantity {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+}
+
+.model{
+    color: #1FA67A;
+}
+
+.table{
+    margin-bottom: 0px;
+}
+
+input, h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#productForm{
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dotted dodgerblue;
+}
+
+#productForm .form-group{
+    margin-bottom: 0;
+}
+
+#productForm input{
+    width: 100%;
+}
+
+#personalInfo{
+    padding: 0;
+}
+
+.required {
+    border: 0 none;
+    color: #FF0000;
+    font-weight: 700;
+    border: none !important;
+}
+
+#orderForm .form-group {
+    padding: 0 0;
+}
+
+#orderForm label{
+    cursor: pointer;
+}
+
+#orderForm input{
+    padding: 7px 12px;
+}

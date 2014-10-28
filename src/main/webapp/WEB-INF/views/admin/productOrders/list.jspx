@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_ProductOrder" items="${productorders}" z="I6pdLivqMszL6SX+eNKT04SvkqY=">
+        <table:table data="${productorders}" id="l_com_usyd_group7_domain_ProductOrder" path="/admin/productOrders" z="W6LbHJSQwGhIJyiEF9pU/C3tJsk=">
+            <table:column id="c_com_usyd_group7_domain_ProductOrder_client" property="client" z="sOSG79mwFHNWtfB99lmOZnMekfk="/>
+            <table:column id="c_com_usyd_group7_domain_ProductOrder_shippingAddress" property="shippingAddress" z="JpK4DPwfTVWWehhH8FPYWi5lJ3Q="/>
+            <table:column id="c_com_usyd_group7_domain_ProductOrder_shippingReceiver" property="shippingReceiver" z="9+SwWsZ4ya38q/NjKCpD8WYZqU8="/>
+            <table:column id="c_com_usyd_group7_domain_ProductOrder_shippingContactNumber" property="shippingContactNumber" z="yjIehTIYQiOQZTEIX3GjJVx9amk="/>
+            <table:column date="true" dateTimePattern="${productOrder_created_date_format}" id="c_com_usyd_group7_domain_ProductOrder_created" property="created" z="cTdM6pdLmU2BvnviV7bMvzFOteA="/>
+        </table:table>
+    </page:list>
+</div>

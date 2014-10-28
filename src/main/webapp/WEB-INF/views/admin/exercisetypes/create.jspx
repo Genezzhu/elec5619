@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_usyd_group7_domain_ExerciseType" modelAttribute="exerciseType" path="/admin/exercisetypes" render="${empty dependencies}" z="2AgvTiZyOz0xVq7w9ciIMBivqLs=">
+        <field:input field="name" id="c_com_usyd_group7_domain_ExerciseType_name" required="true" z="QoBrVXCMAcnha6P+yCVcjYiAhr0="/>
+        <field:input field="calorieRate" id="c_com_usyd_group7_domain_ExerciseType_calorieRate" z="+hvE8+WBE/8mQeZvX6IX3Tyfppg="/>
+        <field:simple field="exercises" id="c_com_usyd_group7_domain_ExerciseType_exercises" messageCode="entity_reference_not_managed" messageCodeAttribute="Exercise" z="2AlRfFUwQx4v14biZiNR0+5YYXA="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_usyd_group7_domain_ExerciseType" render="${not empty dependencies}" z="k/X2BpPByglJkJ3xfbdd/tQS3XQ="/>
+</div>

@@ -1,0 +1,40 @@
+/* library */
+@import "bootstrap.css";
+
+@import "font-awesome.css";
+
+@import "animate.css";
+
+/* Custom */
+@import "client.css";
+@import "exercise_records.css";
+
+
+/* Global css */
+
+/* hide some part on the printer */
+@media print {
+	.printer-hidden {
+		display:none;		
+	}	
+}
+
+a {
+	cursor: pointer;
+}
+
+.margin-right-10 {
+	margin-right:10px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+
+/* growl plugin style */
+[data-growl="title"] {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 15px;
+}

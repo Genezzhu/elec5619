@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_usyd_group7_domain_ClientAction" object="${clientaction}" path="/admin/clientactions" z="1LZhWVR2bVV74OHGBnT0NkraAQM=">
+        <field:display field="name" id="s_com_usyd_group7_domain_ClientAction_name" object="${clientaction}" z="TlaVvSzpAQROuG/rd2KidSpESk4="/>
+        <field:display field="actionCategory" id="s_com_usyd_group7_domain_ClientAction_actionCategory" object="${clientaction}" z="r+3RSfdqgnRvAko7vFSQh/3CC1E="/>
+        <field:display field="exp" id="s_com_usyd_group7_domain_ClientAction_exp" object="${clientaction}" z="9C3xKK8et5lW34PD1/65UIFgdqg="/>
+        <field:display field="descr" id="s_com_usyd_group7_domain_ClientAction_descr" object="${clientaction}" z="FyIqjr3ta83b9bkteFub1fqXqEA="/>
+        <field:display field="credit" id="s_com_usyd_group7_domain_ClientAction_credit" object="${clientaction}" z="yL8fN+0LPtLtbKpgK7tAGyRTdNw="/>
+    </page:show>
+</div>

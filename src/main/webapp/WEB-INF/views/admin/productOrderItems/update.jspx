@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_usyd_group7_domain_ProductOrderItem" modelAttribute="productOrderItem" path="/admin/productOrderItems" versionField="Version" z="jypqbQ9uNuR6886ZZ1y25aJURhE=">
+        <field:input field="amount" id="c_com_usyd_group7_domain_ProductOrderItem_amount" z="agWGRRjgU6tS3qL3JHpRR9ZWU+0="/>
+        <field:select field="product" id="c_com_usyd_group7_domain_ProductOrderItem_product" itemValue="id" items="${products}" path="/admin/products" z="97ioCG98NNUxAY0M0kB3AJ2VeSE="/>
+    </form:update>
+</div>

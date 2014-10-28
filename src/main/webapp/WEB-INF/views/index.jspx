@@ -1,0 +1,17 @@
+<div xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Hello, Welcome to health advise!</h1>
+			<p>We hope you keep health every day</p>
+			<p>
+				<a class="btn btn-primary btn-lg" role="button" href="blogs/">Learn more from blogs</a>
+			</p>
+		</div>
+	</div>
+
+</div>

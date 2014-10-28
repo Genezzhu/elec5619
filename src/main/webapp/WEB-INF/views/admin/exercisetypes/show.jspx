@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_usyd_group7_domain_ExerciseType" object="${exercisetype}" path="/admin/exercisetypes" z="npiUm9UqEoEeO/LBeCH2SZPPNF0=">
+        <field:display field="name" id="s_com_usyd_group7_domain_ExerciseType_name" object="${exercisetype}" z="qZ23XPsjDIGUSZNr6f/5RA2DZ8E="/>
+        <field:display field="calorieRate" id="s_com_usyd_group7_domain_ExerciseType_calorieRate" object="${exercisetype}" z="xWTy/WhKD/E6u8xb2PPCSaG4qeg="/>
+    </page:show>
+</div>

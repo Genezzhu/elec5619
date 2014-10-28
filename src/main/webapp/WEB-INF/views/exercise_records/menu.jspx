@@ -1,0 +1,17 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags">
+
+	<!-- Left menus for exercise records page -->
+	<spring:url value="/exercise_records/all_records" var="all_records_url" />
+	<spring:url value="/exercise_records/edit_record" var="edit_record_url" />
+
+	<ul class="nav nav-pills nav-stacked page-menu"
+		style="max-width: 300px;" id="exercise_records_menu">
+		<li id="all_records"><a href="${all_records_url}">All Records</a></li>
+		<li id="edit_record"><a href="${edit_record_url}">Create New
+				Record</a></li>
+	</ul>
+
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_usyd_group7_domain_ProductOrder" modelAttribute="productOrder" path="/admin/productOrders" versionField="Version" z="xH2bvmCxiWUo59S9iarRE5o6YCw=">
+        <field:select field="client" id="c_com_usyd_group7_domain_ProductOrder_client" itemValue="id" items="${clients}" path="/admin/clients" z="pixwbfAr/mV4J7oNx6EtpOxHcv0="/>
+        <field:simple field="orderItems" id="c_com_usyd_group7_domain_ProductOrder_orderItems" messageCode="entity_reference_not_managed" messageCodeAttribute="Product Order Item" z="QsK+rjzjnMnxv54rr4gGeQimSgU="/>
+        <field:input field="shippingAddress" id="c_com_usyd_group7_domain_ProductOrder_shippingAddress" z="znXw9mChFJIBonA2ZeyX5JxoGq0="/>
+        <field:input field="shippingReceiver" id="c_com_usyd_group7_domain_ProductOrder_shippingReceiver" z="Y8riOeH2gGac4By1A8vJWiiBP3s="/>
+        <field:input field="shippingContactNumber" id="c_com_usyd_group7_domain_ProductOrder_shippingContactNumber" z="q1I0yP+yhfWzh7lKJyWiVGQyssg="/>
+    </form:update>
+</div>

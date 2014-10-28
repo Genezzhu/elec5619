@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_usyd_group7_domain_Client" object="${client}" path="/admin/clients" z="3lsgZ2QDJHkS8KC92jJcnUr5iCw=">
+        <field:display field="username" id="s_com_usyd_group7_domain_Client_username" object="${client}" z="2APs0TEiI8FpLl8hExWIK7xWAjQ="/>
+        <field:display field="password" id="s_com_usyd_group7_domain_Client_password" object="${client}" z="bulY7PbKZc9yJdhQLze6adYhPO0="/>
+        <field:display field="email" id="s_com_usyd_group7_domain_Client_email" object="${client}" z="Mj317Gud1TOYwZga69PMUfnFAxs="/>
+        <field:display field="emailVerified" id="s_com_usyd_group7_domain_Client_emailVerified" object="${client}" z="sFtFmVxlpwdWn2n3SNXQn4I/Ebg="/>
+        <field:display field="exp" id="s_com_usyd_group7_domain_Client_exp" object="${client}" z="iFOmPOTZfvV0FXwqFEJTAh8uRwQ="/>
+        <field:display field="clientLevel" id="s_com_usyd_group7_domain_Client_clientLevel" object="${client}" z="GwfUJJ6j95oi8LoKlr8M1KwABjQ="/>
+        <field:display field="blogs" id="s_com_usyd_group7_domain_Client_blogs" object="${client}" z="6mx55nCh6Vb346RrFqhU8K3ozFc="/>
+        <field:display field="height" id="s_com_usyd_group7_domain_Client_height" object="${client}" z="ce5ZpaiXU6OlXD++0YNx93tsPJU="/>
+        <field:display field="weight" id="s_com_usyd_group7_domain_Client_weight" object="${client}" z="r6KfEYga7aHh+vm+0cVn/UcJyKw="/>
+        <field:display field="credit" id="s_com_usyd_group7_domain_Client_credit" object="${client}" z="ywKowA+BKwtdcCKVDF1KQVPJ+Ls="/>
+        <field:display field="point" id="s_com_usyd_group7_domain_Client_point" object="${client}" z="hEQruYMLbyVTFi5DW+dh8CrDDBM="/>
+    </page:show>
+</div>

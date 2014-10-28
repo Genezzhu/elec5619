@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_usyd_group7_domain_Blog" object="${blog}" path="/admin/blogs" z="G6+Jy52KXikOBPatv7FX69E+I58=">
+        <field:display field="title" id="s_com_usyd_group7_domain_Blog_title" object="${blog}" z="tWFOrnYifBNj1oWEsEbpF5jv2XA="/>
+        <field:display field="content" id="s_com_usyd_group7_domain_Blog_content" object="${blog}" z="0VvTwOi97UIvumifN06KyAB5Ap0="/>
+        <field:display field="author" id="s_com_usyd_group7_domain_Blog_author" object="${blog}" z="Ww7FDjAz9D/KNeF8pWkNqUE667Q="/>
+        <field:display field="blogType" id="s_com_usyd_group7_domain_Blog_blogType" object="${blog}" z="UL1wgc1NoOch7nfOxzTmJXLz9VM="/>
+    </page:show>
+</div>

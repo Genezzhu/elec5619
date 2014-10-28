@@ -1,0 +1,20 @@
+
+#loginForm h4 {
+    margin-top: 5px;
+}
+
+#loginForm .form-group {
+    padding: 10px 0;
+}
+
+#loginForm input{
+    border: 1px solid #cccccc;
+}
+
+#myModel{
+    z-index: 999999;
+}
+
+#updateModel{
+    z-index: 99999;
+}

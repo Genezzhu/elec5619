@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_usyd_group7_domain_Exercise" object="${exercise}" path="/admin/exercises" z="qsOInHF+RxMdeazXesSYjKoT+rU=">
+        <field:display field="duration" id="s_com_usyd_group7_domain_Exercise_duration" object="${exercise}" z="AjepUu2qouSahxROMjqefnwR2RI="/>
+        <field:display field="calorie" id="s_com_usyd_group7_domain_Exercise_calorie" object="${exercise}" z="38PWaLA6KT9lGX4zNm/EuhRN5fo="/>
+        <field:display field="descr" id="s_com_usyd_group7_domain_Exercise_descr" object="${exercise}" z="VmaLQ8Gjcmqg2vJAXSP/5G87vgE="/>
+        <field:display field="location" id="s_com_usyd_group7_domain_Exercise_location" object="${exercise}" z="mNkLKhlMTCmltCTFFQE8sBs3Haw="/>
+        <field:display field="client" id="s_com_usyd_group7_domain_Exercise_client" object="${exercise}" z="kbfCIXUTEaqdRaKJGK1l1fwLo98="/>
+        <field:display field="exerciseType" id="s_com_usyd_group7_domain_Exercise_exerciseType" object="${exercise}" z="JkxYIBx2yrpSnvBoenwPQRfqXlw="/>
+    </page:show>
+</div>

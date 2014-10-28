@@ -1,0 +1,22 @@
+.clear-margin{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#mainContainer{
+    left: 0;
+}
+
+.site-header{
+    top: 0;
+    bottom: 0;
+}
+
+#mainFrame{
+    width: 100%;
+    border: none;
+}
+
+#templatemo_logo a{
+    color: #ffffff;
+}

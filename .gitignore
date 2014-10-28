@@ -1,0 +1,8 @@
+log.roo
+target/
+*.class
+.DS_Store
+bin/
+scripts/
+target/
+/target/

@@ -1,0 +1,96 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+
+	<spring:url value="/" var="base" />
+	<c:set value="" var="emptyStr" />
+
+	<div class="container">
+		<!-- page navigate bar -->
+		<ol class="breadcrumb printer-hidden">
+			<li><a href="${base}">Home</a></li>
+			<li class="active">My Shopping History</li>
+		</ol>
+
+		<!-- page header -->
+		<div class="page-header">
+			<h1>My Shopping History</h1>
+		</div>
+
+		<div class="alert alert-info">Current credit: ${client.credit}</div>
+
+		<c:if test="${not empty orders}">
+
+			<div class="row">
+				<c:forEach items="${orders}" var="order">
+					<div class="col-sm-6">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								Order #${order.id} <span class="pull-right"> <fmt:formatDate
+										type="both" value="${order.created}" />
+								</span>
+							</div>
+							<div class="panel-body">
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Product</th>
+											<th>Description</th>
+											<th>Credit Required</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+										<c:set var="creditSum" value="0" />
+										<c:forEach items="${order.orderItems}" var="orderItem"
+											varStatus="orderItemLoop">
+											<c:set var="creditSum"
+												value="${creditSum + orderItem.product.credit * orderItem.amount}" />
+
+											<tr>
+												<td>${orderItem.product.name}</td>
+												<td>${orderItem.product.descr}</td>
+												<td>${orderItem.product.credit}</td>
+												<td>${orderItem.amount}</td>
+											</tr>
+										</c:forEach>
+										<tr>
+											<td />
+											<td />
+											<td>Total: ${creditSum}</td>
+											<td />
+										</tr>
+									</tbody>
+								</table>
+
+								<ul class="list-group">
+									<li class="list-group-item"><i
+										class="glyphicon glyphicon-user"> <!-- required -->
+									</i> Receiver: ${order.shippingReceiver}</li>
+									<li class="list-group-item"><i
+										class="glyphicon glyphicon-earphone"> <!-- required -->
+									</i> Contact Number: ${order.shippingContactNumber}</li>
+									<li class="list-group-item"><i
+										class="glyphicon glyphicon-map-marker"> <!-- required -->
+									</i> Shipping Address: ${order.shippingAddress}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</c:forEach>
+			</div>
+
+		</c:if>
+		<c:if test="${empty orders}">
+			<div class="row">
+				<div class="text-center col-md-8-offset-2">
+					<h4>No shopping history</h4>
+				</div>
+			</div>
+		</c:if>
+	</div>
+</jsp:root>

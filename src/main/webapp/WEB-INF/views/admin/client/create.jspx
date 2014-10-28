@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_usyd_group7_domain_Client" modelAttribute="client" path="/admin/client" render="${empty dependencies}" z="A7BNvCXjsLSuhEAFIUGlP0ZMbGc=">
+        <field:input field="username" id="c_com_usyd_group7_domain_Client_username" required="true" z="O+xookWZQriWk5mkrQmOLOVYe+o="/>
+        <field:input field="password" id="c_com_usyd_group7_domain_Client_password" z="uKTw4BwHF538hAgJAEa9zeZLRnA="/>
+        <field:input field="email" id="c_com_usyd_group7_domain_Client_email" validationMessageCode="field_invalid_email" z="l7mMeQ6bYAW5Zt6aVr6W1ccslxY="/>
+        <field:checkbox field="emailVerified" id="c_com_usyd_group7_domain_Client_emailVerified" z="+ula96Nv9jyiFH7GVWEuRjmNKw0="/>
+        <field:input field="exp" id="c_com_usyd_group7_domain_Client_exp" z="PH+WP/B9u+NZTHeajSH4dG0SCDE="/>
+        <field:simple field="exercises" id="c_com_usyd_group7_domain_Client_exercises" messageCode="entity_reference_not_managed" messageCodeAttribute="Exercise" z="2O6zctCpm0YxoCCby8ZAynWnQFI="/>
+        <field:select field="clientLevel" id="c_com_usyd_group7_domain_Client_clientLevel" itemValue="id" items="${clientlevels}" path="/clientlevels" z="jmvQIKJYOfnLsMzxofC0Gjxg7JM="/>
+        <field:simple field="actionHistorys" id="c_com_usyd_group7_domain_Client_actionHistorys" messageCode="entity_reference_not_managed" messageCodeAttribute="Action History" z="SQoatspJ7ocmI55g782bn0a4AxI="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_usyd_group7_domain_Client" render="${not empty dependencies}" z="6SqQhUlSjIQjuduFF6KWUiDI5nc="/>
+</div>

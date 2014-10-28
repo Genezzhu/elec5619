@@ -1,0 +1,17 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags">
+
+	<!-- Left menus for my blogs page -->
+	<spring:url value="/blogs/my_blogs" var="my_blogs_url" />
+	<spring:url value="/blogs/edit_blog" var="edit_blog_url" />
+
+	<ul class="nav nav-pills nav-stacked page-menu"
+		style="max-width: 300px;">
+		<li id="all_blogs"><a href="${my_blogs_url}">My Blogs</a></li>
+		<li id="edit_blog"><a href="${edit_blog_url}">Create New
+				Blog</a></li>
+	</ul>
+
+</div>

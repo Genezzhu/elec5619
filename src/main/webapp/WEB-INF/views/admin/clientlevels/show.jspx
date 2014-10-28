@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_usyd_group7_domain_ClientLevel" object="${clientlevel}" path="/admin/clientlevels" z="iiIROyd1EgoCTtXw4WmcWjqEIyE=">
+        <field:display field="clientLevel" id="s_com_usyd_group7_domain_ClientLevel_clientLevel" object="${clientlevel}" z="R80lvRx/NrNUzweH00TMk+CyNmY="/>
+        <field:display field="expRequired" id="s_com_usyd_group7_domain_ClientLevel_expRequired" object="${clientlevel}" z="s4EQryAFYs1dWw+TmUAYRcqe2A0="/>
+        <field:display field="name" id="s_com_usyd_group7_domain_ClientLevel_name" object="${clientlevel}" z="nqGUS/qQHwUrvYFW2SMcCDCiGf8="/>
+        <field:display field="badge" id="s_com_usyd_group7_domain_ClientLevel_badge" object="${clientlevel}" z="/M1bvBMatpReFZME/rqoTN2RauQ="/>
+    </page:show>
+</div>

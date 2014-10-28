@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_FoodComment" items="${foodcomments}" z="9lG63KgP9b+rReA5As0WKeBJj3s=">
+        <table:table data="${foodcomments}" id="l_com_usyd_group7_domain_FoodComment" path="/admin/foodcomments" z="5MjfEozCQ8/lfNGrjNw1kBEMEw4=">
+            <table:column id="c_com_usyd_group7_domain_FoodComment_content" property="content" z="U1ByPw9j16TJpcpo40GC1TbvBhg="/>
+            <table:column date="true" dateTimePattern="${foodComment_created_date_format}" id="c_com_usyd_group7_domain_FoodComment_created" property="created" z="5gbfqb7m1XsRdn9naSUI5pXrvAU="/>
+            <table:column id="c_com_usyd_group7_domain_FoodComment_client" property="client" z="NxjnMBTfzDLfRZv/prAg6HDs6zk="/>
+            <table:column id="c_com_usyd_group7_domain_FoodComment_food" property="food" z="rQca6Q1lBv4c1rSIrfBTUOGMOxU="/>
+        </table:table>
+    </page:list>
+</div>

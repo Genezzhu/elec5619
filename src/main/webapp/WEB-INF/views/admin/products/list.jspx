@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_Product" items="${products}" z="tc/3LJ/VAuuBulNdurzEDaVpYoc=">
+        <table:table data="${products}" id="l_com_usyd_group7_domain_Product" path="/admin/products" z="KJDZvE0F/FrNV3ZIIFVpWIMwNJ4=">
+            <table:column id="c_com_usyd_group7_domain_Product_name" property="name" z="ZiXxcbAcWAtW+ymKjuCKYDGNDLQ="/>
+            <table:column id="c_com_usyd_group7_domain_Product_credit" property="credit" z="pRMnP2ldCPQx+uxJan9D45KNrjA="/>
+            <table:column id="c_com_usyd_group7_domain_Product_price" property="price" z="FGJ8HBGkz1urCrNNNu62wG+1yiI="/>
+            <table:column id="c_com_usyd_group7_domain_Product_image" property="image" z="uZrCvW1OjVkQQ3+uGEbxIDbgJt0="/>
+            <table:column id="c_com_usyd_group7_domain_Product_descr" property="descr" z="vnAHTmL+QyBpgOi4g+cZoGrz2rs="/>
+        </table:table>
+    </page:list>
+</div>

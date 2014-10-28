@@ -1,0 +1,86 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.0">
+
+	<script src="//tinymce.cachefly.net/4.1/tinymce.min.js">
+	<!-- required -->
+		
+	</script>
+
+	<!-- edit blog page -->
+	<spring:url value="/" var="base" />
+
+	<!-- page navigate bar -->
+	<ol class="breadcrumb">
+		<li><a href="${base}">Home</a></li>
+		<li class="active">Edit Blog</li>
+	</ol>
+
+	<!-- page header -->
+	<div class="page-header">
+		<h1>Edit Blog</h1>
+	</div>
+
+	<!-- use http POST to submit the form -->
+	<form class="form-horizontal" role="form" method="post"
+		action="on_edit_blog">
+		<input type="hidden" name="id" value="${blog.id}" />
+		<div class="form-group">
+			<label for="type" class="col-sm-3 control-label">Type</label>
+			<div class="col-sm-9">
+				<select class="form-control" placeholder="Choose a type"
+					id="blog_type_select" name="type">
+					<c:forEach items="${blogTypes}" var="blogType">
+						<option value="${blogType.id}">${blogType.name}</option>
+					</c:forEach>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-3 control-label">Title </label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="title" name="title"
+					placeholder="Blog Title" value="${blog.title}" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="created" class="col-sm-3 control-label">Date</label>
+			<div class="col-sm-9">
+				<fmt:formatDate pattern="yyyy-MM-dd'T'HH:mm:ss"
+					value="${blog.created}" var="created" />
+				<input type="datetime-local" class="form-control" id="created"
+					name="created" placeholder="Date" value="${created}"
+					required="true" />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="content" class="col-sm-3 control-label">Content</label>
+			<div class="col-sm-9">
+				<textarea class="form-control" name="content" rows="3"
+					id="blog_content" placeholder="content">${blog.content}</textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-9">
+				<button type="submit" class="btn btn-success btn-lg">Save</button>
+			</div>
+		</div>
+	</form>
+
+	<script>
+		tinymce.init({
+			selector : 'textarea',
+			height : 600
+		});
+
+		// highlight 
+		var type_selected = "${blog.blogType.id}";
+		if (type_selected) {
+			$('#blog_type_select').val(type_selected);
+		}
+	</script>
+</jsp:root>

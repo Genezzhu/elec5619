@@ -1,0 +1,100 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt">
+
+	<!-- edit record page -->
+
+	<spring:url value="/" var="base" />
+	<spring:url value="/exercise_records" var="exercise_records_url" />
+
+	<!-- page navigate bar -->
+	<ol class="breadcrumb">
+		<li><a href="${base}">Home</a></li>
+		<li><a href="${exercise_records_url}">Exercise Records</a></li>
+		<li class="active">edit record</li>
+	</ol>
+
+	<!-- page header -->
+	<div class="page-header">
+		<h1>Edit Exercise Record</h1>
+	</div>
+
+	<!-- use http POST to submit the form -->
+	<form class="form-horizontal" role="form"
+		id="edit-exercise-record-form" method="post" action="on_edit_record">
+		<input type="hidden" name="id" value="${exercise.id}" />
+		<div class="form-group">
+			<label for="type" class="col-sm-3 control-label">Type</label>
+			<div class="col-sm-9">
+				<select class="form-control" placeholder="Choose a type"
+					id="exercise_type_select" name="type">
+					<c:forEach items="${exerciseTypes}" var="exerciseType">
+						<option value="${exerciseType.id}">${exerciseType.name}</option>
+					</c:forEach>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="duration" class="col-sm-3 control-label">Duration
+				(minutes)</label>
+			<fmt:formatNumber type="number" maxFractionDigits="0"
+				value="${exercise.duration}" var="duration" />
+			<div class="col-sm-9">
+				<input type="number" class="form-control" id="duration"
+					name="duration" placeholder="Duration" value="${duration}"
+					required="true" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="calorie" class="col-sm-3 control-label">Calories
+				burned (empty then apply default calorie rate)</label>
+			<div class="col-sm-9">
+				<fmt:formatNumber type="number" maxFractionDigits="0"
+					value="${exercise.calorie}" var="calorie" />
+				<input type="text" class="form-control" id="calorie"
+					name="calorie" placeholder="Calories burned" value="${calorie}"
+					/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="created" class="col-sm-3 control-label">Date</label>
+			<div class="col-sm-9">
+				<fmt:formatDate pattern="yyyy-MM-dd'T'HH:mm:ss"
+					value="${exercise.created}" var="created" />
+				<input type="datetime-local" class="form-control" id="created"
+					name="created" placeholder="Date" value="${created}"
+					required="true" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="location" class="col-sm-3 control-label">Location</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="location"
+					name="location" placeholder="Location" value="${exercise.location}" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="description" class="col-sm-3 control-label">Description</label>
+			<div class="col-sm-9">
+				<textarea class="form-control" name="description" rows="3"
+					placeholder="Description">${exercise.descr}</textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-9">
+				<button type="submit" class="btn btn-success btn-lg">Save</button>
+			</div>
+		</div>
+	</form>
+
+	<script>
+		// highlight 
+		var exercise_type_selected = "${exercise.exerciseType.id}";
+		if (exercise_type_selected) {
+			$('#exercise_type_select').val(exercise_type_selected);
+		}
+	</script>
+</div>

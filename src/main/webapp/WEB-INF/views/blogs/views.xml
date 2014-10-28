@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- MY BLOG PAGE CONTENT -->
+	<definition name="blogs.my_blogs_content" template="/WEB-INF/views/blogs/layout.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/blogs/menu.jspx" />
+		<put-attribute name="content" value="/WEB-INF/views/blogs/my_blogs.jspx" />
+	</definition>
+
+	<!-- ADD/MODIFY BLOG CONTENT -->
+
+	<definition name="blogs.edit_blog_content" template="/WEB-INF/views/blogs/layout.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/blogs/menu.jspx" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/blogs/edit_blog.jspx" />
+	</definition>
+
+	<!-- MY BLOGS PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="blogs.my_blogs">
+		<put-attribute name="body" value="blogs.my_blogs_content" />
+	</definition>
+
+	<!-- EDIT BLOG PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="blogs.edit_blog">
+		<put-attribute name="body" value="blogs.edit_blog_content" />
+	</definition>
+
+	<!-- VIEW BLOG PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="blogs.view_blog">
+		<put-attribute name="body" value="/WEB-INF/views/blogs/view_blog.jspx" />
+	</definition>
+
+	<!-- ALL BLOGS PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="blogs.all_blogs">
+		<put-attribute name="body" value="/WEB-INF/views/blogs/all_blogs.jspx" />
+	</definition>
+
+
+</tiles-definitions>

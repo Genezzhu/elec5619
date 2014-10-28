@@ -1,0 +1,106 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+	<spring:url value="/" var="base" />
+	<c:set value="" var="emptyStr" />
+	<spring:url value="/clients" var="clients_url" />
+
+	<ol class="breadcrumb">
+		<li><a href="${base}">Home</a></li>
+		<li class="active">My Level</li>
+	</ol>
+
+	<div class="page-header">
+		<h1>My Level</h1>
+	</div>
+
+	<!-- show my level detail -->
+	<div class="row">
+		<div class="col-sm-2">
+			<spring:url
+				value="/static/img/lvl${client.clientLevel.clientLevel}.jpg"
+				var="lvl_img_url" />
+
+			<img src="${lvl_img_url}" style="max-width: 100%"/>
+		</div>
+		<div class="col-sm-4">
+			<p>
+				<b>${client.clientLevel.name}</b>
+			</p>
+			<p class="text-info">
+				Level: <b>${client.clientLevel.clientLevel}</b>
+			</p>
+			<p class="text-info">
+				Credit: <b>${client.credit}</b>
+			</p>
+		</div>
+
+		<div class="col-sm-6">
+			<p>
+				EXP: <b>${client.exp}/${nextLevel.expRequired}</b>
+			</p>
+			<div class="progress">
+				<div
+					class="progress-bar progress-bar-info progress-bar-striped active"
+					role="progressbar" aria-valuenow="60" aria-valuemin="0"
+					aria-valuemax="100"
+					style="width: ${100*client.exp/nextLevel.expRequired}%;">${client.exp}/
+					${nextLevel.expRequired}</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- show all action histories -->
+	<table class="table table-striped pagination-table">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Action</th>
+				<th>EXP</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${actionHistorys}" var="actionHistory"
+				varStatus="actionHistoryLoop">
+				<tr data-index="${actionHistoryLoop.index}">
+					<!-- formate Date param -->
+					<td><fmt:formatDate type="both"
+							value="${actionHistory.created}" /></td>
+					<td>${actionHistory.clientAction.descr}</td>
+					<td>${actionHistory.clientAction.exp}</td>
+				</tr>
+			</c:forEach>
+
+		</tbody>
+	</table>
+
+	<c:set var="pageCap" value="20" />
+	<c:set var="pageCount" value="${fn:length(actionHistorys) / pageCap}" />
+
+	<div class="text-center">
+		<ul class="pagination">
+			<li><a class="page-nav-btn" data-direction="prev"> <![CDATA[&laquo;]]>
+			</a></li>
+			<c:forEach begin="0" end="${pageCount}" varStatus="pageLoop">
+				<li class="page-btn" data-page-index="${pageLoop.index}"><a>${pageLoop.index+1}</a></li>
+			</c:forEach>
+			<li><a class="page-nav-btn" data-direction="next"> <![CDATA[&raquo;]]>
+			</a></li>
+		</ul>
+	</div>
+
+	<script>
+		var pageCap = "${pageCap}";
+	</script>
+
+	<spring:url value="/resources/static/js/my_level.js" var="my_level_js" />
+	<script src="${my_level_js}" type="text/javascript">
+	<!-- required -->
+		
+	</script>
+
+</div>

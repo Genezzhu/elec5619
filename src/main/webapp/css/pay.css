@@ -1,0 +1,13 @@
+#paySelection{
+    border: 1px solid #26B864;
+    border-radius: 4px;
+}
+
+.tab-pane{
+    padding-top: 20px;
+}
+
+#usePaypal, #useIntegral{
+    width: 0;
+    cursor: pointer;
+}

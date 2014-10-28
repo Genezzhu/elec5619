@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_Exercise" items="${exercises}" z="fbDxLXjavYk3VEpQy8qlZ2tCXdc=">
+        <table:table data="${exercises}" id="l_com_usyd_group7_domain_Exercise" path="/admin/exercises" z="oEKtGXgfV0dN/OqX5P1PHep0VYI=">
+            <table:column id="c_com_usyd_group7_domain_Exercise_duration" property="duration" z="ysztYfU0UN5oLnpx6OIkvWHtijI="/>
+            <table:column id="c_com_usyd_group7_domain_Exercise_calorie" property="calorie" z="JbVWOJozQIl12rsHgpuOFPwD9HI="/>
+            <table:column id="c_com_usyd_group7_domain_Exercise_descr" property="descr" z="b00HD/63YuDs5cEi4uuOtaWIDXc="/>
+            <table:column id="c_com_usyd_group7_domain_Exercise_location" property="location" z="ilketjfOph/YQ4WnQqN0we/srUU="/>
+            <table:column date="true" dateTimePattern="${exercise_created_date_format}" id="c_com_usyd_group7_domain_Exercise_created" property="created" z="gM2aJ7mcZaON7NbGt216hxILojI="/>
+            <table:column id="c_com_usyd_group7_domain_Exercise_client" property="client" z="EE3k1Wzn7PHDx8QGtlp5iehsc9Y="/>
+        </table:table>
+    </page:list>
+</div>

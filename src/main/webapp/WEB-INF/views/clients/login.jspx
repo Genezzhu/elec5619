@@ -1,0 +1,29 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags" class="container"
+	id="login-page">
+
+	<!-- login form -->
+	<div class="row">
+		<spring:url value="/clients/onLogin" var="onLogin" />
+		<form action="${onLogin}" method="post" class="form-signin"
+			role="form">
+			<h2 class="text-center text-primary">Login</h2>
+			<hr />
+			<input class="form-control" type="text" name="username"
+				placeholder="username"> </input>
+			<hr />
+			<input class="form-control" type="password" name="password"
+				placeholder="password"> </input>
+			<hr />
+			<!-- this redirectURL is optional -->
+			<input type="hidden" name="redirectURL" value="${redirectURL}">
+			</input>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
+				in</button>
+			<p class="text-center text-danger">${errorMsg}</p>
+		</form>
+
+	</div>
+</div>

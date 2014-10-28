@@ -1,0 +1,63 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+
+	<spring:url value="/" var="base" />
+	<c:set value="" var="emptyStr" />
+
+	<div class="container">
+		<!-- page navigate bar -->
+		<ol class="breadcrumb printer-hidden">
+			<li><a href="${base}">Home</a></li>
+			<li class="active">All blogs</li>
+		</ol>
+
+		<!-- page header -->
+		<div class="page-header">
+			<h1>All Blogs</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<ul class="nav nav-pills">
+					<c:forEach items="${blogTypes}" var="blogType"
+						varStatus="blogTypeLoop">
+						<c:if test="${currentBlogType.id == blogType.id}">
+							<c:set value="active" var="li_class" />
+						</c:if>
+						<c:if test="${currentBlogType.id != blogType.id}">
+							<c:set value="" var="li_class" />
+						</c:if>
+
+						<li data-index="${blogTypeLoop.index}"
+							class="full-width ${li_class}"><a
+							href="?type=${blogType.id}">${blogType.name}</a></li>
+					</c:forEach>
+				</ul>
+			</div>
+			<div class="col-sm-9">
+				<c:if test="${not empty currentBlogType}">
+					<p>
+						Type: <span class="text-warning">${currentBlogType.name}</span>
+					</p>
+				</c:if>
+				<table class="table table-striped">
+					<c:forEach items="${blogs}" var="blog" varStatus="blogLoop">
+						<tr>
+							<td><a href="view_blog?id=${blog.id}">${blog.title}</a></td>
+							<td>${blog.author.username}</td>
+							<td>${blog.created}</td>
+							<td><a class="btn btn-success"
+								href="view_blog?id=${blog.id}"><i
+									class="glyphicon glyphicon-eye-open">${emptyStr}</i></a></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+		</div>
+
+	</div>
+</jsp:root>

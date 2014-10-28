@@ -1,0 +1,53 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+
+	<spring:url value="/" var="base" />
+	<c:set value="" var="emptyStr" />
+
+	<!-- page navigate bar -->
+	<ol class="breadcrumb printer-hidden">
+		<li><a href="${base}">Home</a></li>
+		<li class="active">my blogs</li>
+	</ol>
+
+	<!-- page header -->
+	<div class="page-header">
+		<h1>My Blogs</h1>
+	</div>
+
+	<table class="table table-striped" id="exercise-table">
+		<thead>
+			<tr>
+				<th width="35%">Title</th>
+				<th width="20%">Type</th>
+				<th width="25%">Created</th>
+				<th class="printer-hidden">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- loop all the client exercises, and print them into a table -->
+			<c:forEach items="${blogs}" var="blog" varStatus="blogLoop">
+				<tr data-index="${blogLoop.index}">
+					<td>${blog.title}</td>
+					<td>${blog.blogType.name}</td>
+					<td><fmt:formatDate type="both" value="${blog.created}" /></td>
+					<td class="printer-hidden">
+						<!-- View btn --> <a class="btn btn-sm btn-success"
+						href="view_blog?id=${blog.id}"><i
+							class="glyphicon glyphicon-eye-open">${emptyStr}</i></a> <!-- Edit btn -->
+						<a class="btn btn-sm btn-warning" href="edit_blog?id=${blog.id}"><i
+							class="glyphicon glyphicon-pencil">${emptyStr}</i></a> <!-- Remove btn, use javascript to confirm -->
+						<a onclick="return confirm('Are you sure to delete this?')"
+						class="btn btn-sm btn-danger" href="remove_blog?id=${blog.id}"><i
+							class="glyphicon glyphicon-remove">${emptyStr}</i></a>
+					</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+
+</jsp:root>

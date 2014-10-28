@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_Food" items="${foods}" z="QxtlOBfexPCbznDzsmITXVp7slc=">
+        <table:table data="${foods}" id="l_com_usyd_group7_domain_Food" path="/admin/foods" z="s5WFLnTXVUDFhRQW7iRyDd6yisM=">
+            <table:column id="c_com_usyd_group7_domain_Food_name" property="name" z="KL9RiSylQy8Hf0WvQyAWkZNUwqw="/>
+            <table:column id="c_com_usyd_group7_domain_Food_image" property="image" z="jDkdpV3vdZ2ncj3YqGuRjY8gLM4="/>
+            <table:column id="c_com_usyd_group7_domain_Food_calorie" property="calorie" z="byxAd3WhZDwtmO5h1Whv4BTxA8I="/>
+            <table:column id="c_com_usyd_group7_domain_Food_unit" property="unit" z="coxkMKhCqKqpvTDhcmWT3gkGqQc="/>
+        </table:table>
+    </page:list>
+</div>

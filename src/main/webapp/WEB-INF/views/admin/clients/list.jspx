@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_usyd_group7_domain_Client" items="${clients}" z="1YqhlHUTgfc7kE5Yvqsfc9CBln4=">
+        <table:table data="${clients}" id="l_com_usyd_group7_domain_Client" path="/admin/clients" z="vVy4ueUN6HLhMyd2cVFYQ97uo+w=">
+            <table:column id="c_com_usyd_group7_domain_Client_username" property="username" z="cHmepyh9U4sq3hvKBItJdvyCScM="/>
+            <table:column id="c_com_usyd_group7_domain_Client_password" property="password" z="eCaRpGtZlC2UkvgWDIVddGRDTb4="/>
+            <table:column id="c_com_usyd_group7_domain_Client_email" property="email" z="CtqZ21wM5XZCXzfU4h3BkwD7nCk="/>
+            <table:column id="c_com_usyd_group7_domain_Client_emailVerified" property="emailVerified" z="pk21Sg5wKQGAGqAtHs+urEs/TTo="/>
+            <table:column id="c_com_usyd_group7_domain_Client_exp" property="exp" z="iwQe+xxjyi+7uGLfSXLjcpVM+o8="/>
+        </table:table>
+    </page:list>
+</div>

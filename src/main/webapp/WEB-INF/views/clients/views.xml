@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- MY LEVELS PAGE CONTENT, use a new layout, contains left menu and right 
+		content -->
+	<definition name="clients.my_level_content" template="/WEB-INF/views/clients/layout.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/clients/menu.jspx" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/clients/my_level.jspx" />
+	</definition>
+
+	<!-- EDIT PROFILE PAGE CONTENT, use a new layout, contains left menu and 
+		right content -->
+	<definition name="clients.edit_profile_content" template="/WEB-INF/views/clients/layout.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/clients/menu.jspx" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/clients/edit_profile.jspx" />
+	</definition>
+
+	<!-- DIET PAGE CONTENT, use a new layout, contains left menu and right content -->
+	<definition name="clients.diet_content" template="/WEB-INF/views/clients/layout.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/clients/menu.jspx" />
+		<put-attribute name="content" value="/WEB-INF/views/clients/diet.jspx" />
+	</definition>
+
+	<!-- LOGIN PAGE TEMPLATE -->
+	<definition extends="public" name="clients.login">
+		<put-attribute name="body" value="/WEB-INF/views/clients/login.jspx" />
+	</definition>
+
+	<!-- LOGIN PAGE TEMPLATE -->
+	<definition extends="public" name="clients.register">
+		<put-attribute name="body"
+			value="/WEB-INF/views/clients/register.jspx" />
+	</definition>
+
+	<!-- MY LEVEL PAGE LOAD GLOBAL TEMPLATE FOR HEADER AND FOTTER -->
+	<definition extends="public" name="clients.my_level">
+		<put-attribute name="body" value="clients.my_level_content" />
+	</definition>
+
+	<!-- PROFILE PAGE LOAD GLOBAL TEMPLATE FOR HEADER AND FOTTER -->
+	<definition extends="public" name="clients.edit_profile">
+		<put-attribute name="body" value="clients.edit_profile_content" />
+	</definition>
+
+	<!-- DIET PAGE LOAD GLOBAL TEMPLATE FOR HEADER AND FOTTER -->
+	<definition extends="public" name="clients.diet">
+		<put-attribute name="body" value="clients.diet_content" />
+	</definition>
+
+</tiles-definitions>

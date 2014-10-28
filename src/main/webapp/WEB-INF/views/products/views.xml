@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- HISTORY PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="products.history">
+		<put-attribute name="body" value="/WEB-INF/views/products/history.jspx" />
+	</definition>
+
+	<!-- VIEW BLOG PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="products.cart">
+		<put-attribute name="body" value="/WEB-INF/views/products/cart.jspx" />
+	</definition>
+
+	<!-- ALL product PAGE, LOAD GLOBAL PUBLIC TEMPLATE -->
+	<definition extends="public" name="products.all_product">
+		<put-attribute name="body"
+			value="/WEB-INF/views/products/all_product.jspx" />
+	</definition>
+
+
+</tiles-definitions>

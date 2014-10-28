@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_usyd_group7_domain_ClientAction" modelAttribute="clientAction" path="/admin/clientactions" versionField="Version" z="DycjBOvnCqQ4Unkdh0lGTvAeqlo=">
+        <field:input field="name" id="c_com_usyd_group7_domain_ClientAction_name" required="true" z="raSKgFRBF7SI+QsSMSZyglQfIKI="/>
+        <field:input field="actionCategory" id="c_com_usyd_group7_domain_ClientAction_actionCategory" z="RV7709bCfbh6lWb51CVhm/H/gCA="/>
+        <field:input field="exp" id="c_com_usyd_group7_domain_ClientAction_exp" z="gHO67nwnBrnxp8ofoTpUwIkuYeI="/>
+        <field:simple field="actionHistorys" id="c_com_usyd_group7_domain_ClientAction_actionHistorys" messageCode="entity_reference_not_managed" messageCodeAttribute="Action History" z="wDYdOP7TAJ+5VAxZC3NODP2+/Po="/>
+        <field:input field="descr" id="c_com_usyd_group7_domain_ClientAction_descr" z="FHDd2QB00iIMnvA+IULqVXrvCuc="/>
+        <field:input field="credit" id="c_com_usyd_group7_domain_ClientAction_credit" z="EanHxyytQU5wY8A9iEqM6u19A0U="/>
+    </form:update>
+</div>
